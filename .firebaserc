@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "lallaskitchen"
+  },
+  "targets": {
+    "lallaskitchen": {
+      "hosting": {
+        "ecomm": [
+          "lallaskitchen"
+        ]
+      }
+    }
+  }
+}

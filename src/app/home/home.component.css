@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    
+}
+
+
+body{
+    background: #fff6ea;
+    display:flex; 
+    flex-direction:column;
+    min-height: 100vh; margin:0; 
+}
+
+
+button{
+    margin-left: 25px;
+    padding: 9px 25px;
+    background-color: rgb(184, 68, 48);
+    color: wheat;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.big-button {
+    position:absolute;
+    margin-top: 25vw;
+    margin-left: 5vw;
+	
+	background-color: rgb(92, 92, 92);
+	color: #fff;
+	font-size: 2vw;
+	padding: 2vw 4vw;
+	border-radius: 5vw;
+	text-decoration: none;
+}
+
+.big-button:hover {
+	background-color: rgb(43, 43, 43);
+}
+
+
+button:hover{
+    background-color: goldenrod;
+}
+
+
+
+#text1{
+    position: absolute;
+    left: 5vw;
+    top: 35vw;
+    color:rgb(0, 33, 33);
+    font-family: 'Dancing Script', cursive;
+    font-size: 3vw;
+}
+
+

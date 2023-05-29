@@ -1,0 +1,44 @@
+<div class="account-details">
+    <div class="info-box">
+      <h2>Account Details</h2>
+      <div>
+        <label>Name:  </label>
+        
+        <span>{{ accountHolder?.cust.Cust_Name }}</span>
+      </div>
+      <div>
+        <label>Mobile No:  </label>
+        <span>{{ accountHolder?.cust.Cust_MobileNO }}</span>
+      
+      </div>
+      <div>
+        <label>Address:  </label>
+        <span>{{ accountHolder?.cust.Cust_Address }}</span>
+ 
+      </div>
+    </div>
+  
+    <div class="update-form" *ngIf="showUpdateForm">
+      <h2>Update Account Details</h2>
+      <form (ngSubmit)="updateAccount()">
+        <div>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" [(ngModel)]="name" required>
+        </div>
+        <div>
+          <label for="mobileNo">Mobile No:</label>
+          <input type="text" id="mobileNo" name="mobileNo" [(ngModel)]="mobile" required>
+        </div>
+        <div>
+          <label for="address">Full Address:</label>
+          <textarea id="address" name="address" [(ngModel)]="address" required></textarea>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  
+    <div *ngIf="!showUpdateForm">
+    <button class="update-btn" (click)="toggleUpdateForm()">Update</button>
+</div>
+  </div>
+  

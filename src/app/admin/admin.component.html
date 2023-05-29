@@ -1,0 +1,107 @@
+
+<app-order></app-order>
+
+
+
+<body>
+
+  <div class="container">
+    <div class="form-container">
+      <h1>Add New Items</h1>
+      <form>
+        
+        <div class="form-group">
+          <label for="image">Image:</label>
+          <input type="file" (change)="UploadImage($event)"  id="image" name="image" accept="image/*"
+            required>
+        </div>
+
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input [(ngModel)]="name" type="text" id="name" name="name" required>
+        </div>
+
+
+        <div class="selectionbox">
+          <div class="options">
+            <label for="category">Category:</label>
+            <select class="select" [(ngModel)]="category" id="category" name="category" required>
+              <option value="veg">Veg</option>
+              <option value="nonVeg">NonVeg</option>
+              <option value="sweets">Sweets</option>
+              <option value="snacks">Snacks</option>
+              <option value="roti">Roti</option>
+            </select>
+          </div>
+
+
+          <div class="options">
+            <label for="Status">Status:</label>
+            <select [(ngModel)]="status" class="select" id="status" name="status" required>
+
+              <option value="Active" selected>Active</option>
+              <option value="Inactive">Inactive</option>
+            </select>
+          </div>
+        </div>
+
+
+        <div class="form-group">
+          <label for="description">Description:</label>
+          <textarea [(ngModel)]="description" type="text" id="description" name="description" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="price">Price:</label>
+          <input [(ngModel)]="price" type="number" id="price" name="price" step="1" required>
+        </div>
+
+  
+       
+        <button (click)="submit()" type="submit">Submit</button>
+      </form>
+    </div>
+
+
+
+
+
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            
+            <th>Category</th>
+            <th>Item Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Image</th>
+            <th>Status</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr *ngFor="let item of items">
+            <td>{{item.category}}</td>
+            <td>{{ item.name }}</td>
+            <td>{{ item.description }}</td>
+            <td>{{ item.price }}</td>
+            <td><img [src]="item.image" alt="Item Image" width="100px"></td>
+
+            <td><button class="status-btn" (click)="ChangeStatus(item)">
+                <span>{{item.status}}</span>
+              </button></td>
+            <td><button class="remove-btn" (click)="RemoveItem(item)">
+                <span class="fa fa-trash"></span>
+              </button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+
+
+
+</body>

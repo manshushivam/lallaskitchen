@@ -1,0 +1,26 @@
+<!-- 
+<router-outlet></router-outlet> -->
+
+<div class="mainBox">
+
+
+	<header class="fixed-header">
+		<div class="header-left">
+
+			<h2> namaste {{displayName}}</h2>
+
+		</div>
+		<div class="header-right">
+			<!-- <a routerLink="" class="fa fa-home"> Home</a> -->
+			<a class="fa fa-user" routerLink="accountDetail"> Your Account Detail</a>
+			<!-- <a class="fa fa-history" routerLink=" order"> Order History</a> -->
+			<a class="fa fa-sign-out" routerLink="" (click)=" logout()"> Logout</a>
+		</div>
+	</header>
+
+
+
+	<div class="content">
+		<router-outlet></router-outlet>
+	</div>
+</div>

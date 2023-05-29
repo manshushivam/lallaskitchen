@@ -1,0 +1,52 @@
+<div class="container">
+  <div class="column">
+    <h2>Orders</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Order ID</th>
+          <th>Timestamp</th>
+          <th>Total Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let order of orders">
+          <td class="clickable" (click)="showCustomerDetails(order.id)">{{order.id}}</td>
+          <td>{{order.oder.time.toDate() | date: 'dd-MM-yy HH:mm' }}</td>
+          <td>{{order.oder.totalPrice}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="column" id="customerDetails">
+    <h2>Customer Details</h2>
+    <p><strong>Customer Name:</strong> <span id="customerName">{{customerDetails?.cust.Cust_Name}}</span></p> 
+    <p><strong>Customer ID:</strong> <span id="customerId">{{customerDetails?.cust.Cust_ID}}</span></p>
+    <p><strong>Customer Mobile:</strong> <span id="customerMobile">{{customerDetails?.cust.Cust_MobileNO}}</span></p>
+    <p><strong>Customer Address:</strong> <span id="customerAddress">{{customerDetails?.cust.Cust_Address}}</span></p>
+  </div>
+
+  <div class="column" id="orderItems">
+    <h2>Order Items</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Item Name</th>
+          <th>Quantity</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody id="orderItemsList">
+        <!-- Dynamically populate the table rows for order items -->
+        <!-- Replace `{{itemName}}`, `{{quantity}}`, and `{{price}}` with the actual data -->
+        <tr *ngFor="let orderItem of orderItems">
+          <td>{{ orderItem.DishName }}</td>
+          <td>{{ orderItem.DishQty }}</td>
+          <td>{{ orderItem.Dishprice }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+

@@ -1,0 +1,77 @@
+ /* Styles for the columns */
+ .container{
+  margin-top: 5vw;
+  display: flex;
+  flex-direction: row;
+  
+ }
+ .column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 1px 5px 5px 5px  #bbbbbb;
+  margin-right: 1vw;
+ 
+}
+
+
+/* Style for the clickable order ID */
+.clickable {
+  cursor: pointer;
+  text-decoration: underline;
+  color: blue;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+  border: none;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+thead {
+  background-color: lightgray;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tbody tr:hover {
+  background-color: lightyellow;
+}
+
+/* Apply the justify-content property to evenly space the table columns */
+thead tr {
+  display: flex;
+  justify-content: space-between;
+}
+
+tbody tr {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Optional: Adjust the styles for the table header cells */
+thead th {
+  flex-basis: 30%;
+}
+
+tbody th {
+  flex-basis: 30%;
+}

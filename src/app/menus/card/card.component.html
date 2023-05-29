@@ -1,0 +1,24 @@
+<div class="mainBox">
+  <div class="card" *ngFor="let item of items">
+    <img img [src]="item.image" alt="Item Image"  class="card-img" />
+
+    <div class="card-content">
+      <h2 class="card-heading">{{ item.name }}</h2>
+      <p class="card-description">{{ item.description }}</p>
+      <!-- <p class="card-description">&#x20B9;{{ item.price }} /-</p> -->
+      <span class="card-description">&#x20B9;{{ item.price }} /-</span>
+    </div>
+
+
+    <div class="qty-button">
+      <div class="card-quantity">
+        <button (click)="decreaseQuantity(item)" class="quantity-btn minus">-</button>
+        <div calss="quantity-input"> {{ item.quantity }} </div>
+        <button (click)="increaseQuantity(item)" class="quantity-btn plus">+</button>
+      </div>
+      <button (click)="addToCart(item)" class="add-to-cart-btn">Add to Cart</button>
+    </div>
+
+
+  </div>
+</div>

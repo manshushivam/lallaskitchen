@@ -1,0 +1,25 @@
+.detailsAboutComp{
+    width: 40%;
+}
+.detailsAboutComp h1{
+    color: brown;
+}
+
+.detailsAboutComp> h3 {
+    margin-top: 20px;
+    color: teal;
+    text-align: justify;
+}
+
+.aboutComp{
+
+    margin-top: 10%;
+    justify-content: space-around;
+    display: flex;
+    flex-direction: row;
+}
+
+.imageAbout{
+    width: 50%;
+    height: auto;
+}
